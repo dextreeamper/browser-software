@@ -1,0 +1,171 @@
+#siteMainVendor.vendorAccount
+    padding: 1% 8%
+
+    .remove--btn, & .update--btn
+        border: none
+        color: white
+        text-align: center
+        text-decoration: none
+        font-size: 14px
+        margin: 5px auto 10px auto
+        cursor: pointer
+        display: block
+        max-width: 130px
+        width: 100%
+        height: 40px
+
+        i
+            color: #fff
+            font-size: 14px
+
+    .remove--btn
+        background-color: #0bbaff
+
+    .update--btn
+        background-color: #ffa902
+
+    .software--author, & .software--details
+        font-size: 16px
+
+    .border--dotted
+        border-bottom: 1px dotted darkgray
+        margin-top: 5%
+        padding: 0
+
+    .page--pagination
+        text-align: right
+        padding: 1% 7%
+
+        a
+            text-decoration: none
+            display: inline-block
+            padding: 8px 8px
+            font-size: 14px
+
+        .black
+            color: $primaryColor
+
+    .product--listing
+        .paddingBottomTop--small
+            padding-top: 10%
+            padding-bottom: 1%
+
+            .p--darkGray
+                i
+                    color: $primaryColor
+                    font-size: 16px
+                    padding-right: 5px
+
+        .software--title
+            text-align: center
+            font-size: 26px
+
+        .software--img
+            text-align: center
+            padding-bottom: 10px
+            padding-top: 20px
+
+            img
+                width: 150px
+                height: 150px
+
+        .software--actions
+            padding-top: 2%
+
+        .software--category
+            p, & i
+                font-size: 14px
+
+            .fa-hashtag
+                color: #666666
+            span
+                color: rgb(153, 153, 153)
+
+@media screen and (min-width: 767px)
+    #siteMainVendor.vendorAccount
+        background-color: white
+
+        .product--listing
+            .paddingBottomTop--small
+                padding: 4% 20px 20px 0
+
+                .p--darkGray
+                    text-align: left
+                    position: relative
+
+                .p--darkGray:before, & .p--darkGray:after
+                    position: absolute
+                    top: 51%
+                    overflow: hidden
+                    width: 74%
+                    height: 1px
+                    content: '\a0'
+                    background-color: #ffa83c
+                    right: 3%
+
+                .p--darkGray:before
+                    margin-left: -100%
+
+            .software--product
+                display: flex
+
+            .software--img
+                padding-right: 5%
+
+                img
+                    display: block
+
+            .software--desc
+                width: 46%
+                padding-bottom: 20px
+                padding-top: 20px
+
+                .software--title
+                    text-align: left
+
+                .software--category > p
+                    text-align: left
+
+            .software--actions
+                padding: 0
+                width: 30%
+                float: right
+                position: absolute
+                right: 2%
+
+
+@media screen and (min-width: 967px)
+    #siteMainVendor.vendorAccount
+        .product--listing
+            padding: 1% 13%
+
+            .paddingBottomTop--small
+                .p--darkGray:before, & .p--darkGray:after
+                    width: 72%
+
+            .software--desc
+                width: 55%
+
+            .software--actions
+                padding-top: 10px
+                position: inherit
+                right: 0
+
+
+@media screen and (min-width: 1000px)
+    #siteMainVendor.vendorAccount
+        .product--listing
+            .paddingBottomTop--small
+                .p--darkGray:before, & .p--darkGray:after
+                    width: 80%
+                    right: -1%
+
+
+
+
+
+
+
+
+
+

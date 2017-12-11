@@ -1,0 +1,42 @@
+.vendorAccountProfile--circle
+  background-color: white
+
+  .profile-wrapper
+    float: right
+    padding: 0 30px
+
+  .profile
+
+    &:hover
+      cursor: pointer
+
+    .name
+      color: #fff
+      line-height: 26px
+      display: none
+    &:hover .name
+      color: #0088cc
+      display: block
+    img
+      width: 60px
+      height: 60px
+      border-radius: 99em
+      display: inline
+      float: right
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset
+
+  .menu
+    display: none
+    clear: both
+    margin: 20px 0 0 0
+    li
+      font-size: 12px
+      margin: 10px 0 0
+      a
+        color: #555
+      &:hover a
+        color: #333333
+
+  .profile:hover .menu
+    display: block
+

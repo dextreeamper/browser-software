@@ -1,0 +1,43 @@
+@import "../0-tools/_-tools"
+
+.container-email-vendor
+  padding: 10%
+  text-align: center
+
+  h1
+    margin-bottom: 1em
+
+  a
+    background-color: $primaryColor
+    color: #fff
+    padding: 0.5em
+    display: inline-block
+    transition: background-color 0.2s ease-in
+
+    &:hover
+      color: $white
+      background: $darkAccentColor
+
+.emailBox
+  display: flex
+  width: 680px
+  margin: auto
+
+  span
+    margin-right: 25px
+
+    > i
+      color: #737373
+      font-size: 48px
+
+  p
+    margin-bottom: 0.5em
+
+.emailBox--small
+  width: 600px
+
+.resendLink-box
+  //display: flex
+  margin-top: 25px
+  text-align: left
+

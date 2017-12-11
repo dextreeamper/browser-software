@@ -1,0 +1,510 @@
+@import "../0-tools/_-tools"
+
+// base styling
+*
+    box-sizing: border-box
+
+html
+    font-size: 20px
+    
+
+ul
+    padding: 0
+
+li
+    list-style-type: none
+
+    
+a
+    color: $primaryColor
+    text-decoration: none
+    +soft-transition(color)
+    cursor: pointer
+
+    &:hover
+        color: $darkAccentColor
+
+p
+    margin: 0 0 0.8em 0
+    font-size: 1rem
+    text-align: justify
+
+h1
+    margin: 0.4em 0
+    font-size: 1.5rem
+    margin-top: 0
+
+button
+    cursor: pointer
+    outline: 0
+    
+
+
+// class and id styling
+
+// active, toggle class in here.
+.toggleMenuButton--accent > i
+    color: $accentColor 
+
+
+// for menu
+.menu
+    display: flex
+    margin: 0
+
+    &.menu--vertical
+        flex-direction: column
+
+        .menu__link
+            color: $white
+          
+
+    &.menu--horizontal
+        flex-direction: row
+        
+        > .menu__link  
+            display: inline-block
+            margin-right: 0.8em
+
+            &:last-child
+                margin-right: 0
+    
+    .menu__link
+
+        &:hover a, &:hover a > i
+            color: $darkAccentColor
+                
+    a
+        color: $lightGrayColor
+        text-decoration: none
+        +soft-transition(color)
+        font-size: 13px
+        
+        
+// for form 
+.form
+    display: flex
+    flex-direction: column
+
+.form__field
+    margin-bottom: 0.8em
+    padding: 0.5em
+    font-size: 14px 
+    border: 0
+
+.btn
+    border: 0
+    border-radius: 0.1em
+    color: white
+    background-color: $primaryColor
+    padding: 1em
+    display: inline-block
+    +soft-transition(background-color)
+    
+    &:hover
+        background-color: $darkAccentColor
+    
+    &.btn--small
+        font-size: 14px
+
+.button--noBorder
+    border: 0
+    outline: 0
+
+.btn--primary
+    background-color: $primaryColor
+
+
+::-webkit-input-placeholder
+    color: #a7a7a7
+
+::-moz-placeholder
+    color: #a7a7a7
+
+
+
+
+// for image ang videos
+img
+    max-width: 100%
+    height: auto
+
+// for icon
+.fa
+    font-size: 23px
+    color: $white
+    +soft-transition(color)
+
+.icon--primary
+    color: $primaryColor
+
+// for layouts and group
+.container
+    position: relative
+    padding: 0 10%
+
+
+.row
+    position: relative
+    width: 100%
+    
+    
+    .row__col-3
+        width: 100%
+        float: left
+
+// for alignment and margin
+.italic
+    font-style: italic
+
+.center
+    text-align: center
+
+.marginBottom--small
+    margin-bottom: 1.76em
+
+.marginBottom--big
+    margin-bottom: 45px
+
+
+// clearfix
+.group:before, .group:after
+    content: ""
+    display: table
+
+.group:after
+    clear: both
+
+.group
+    zoom: 1 
+
+
+// for text
+.text
+    color: $white
+    margin-bottom: 1em
+    font-size: 13px
+    display: block
+
+    &.text--large
+        font-size: 14px
+        font-weight: 500
+
+    &.text--small
+        font-size: 10px
+
+.p--white
+    color: $white
+    
+.p--small
+    font-size: 0.8rem
+
+.p--darkGray
+    color: $darkGrayColor
+
+.hl--white
+    color: $white
+    
+.hl--darkGray
+    color: $darkGrayColor
+ 
+
+// for header
+#siteHeader
+    background-color: $white
+    
+    & nav
+        position: relative
+        // padding: 1em 0
+        display: flex
+        justify-content: space-between 
+        align-items: center
+
+
+        & .menu
+            background: #0BBAFF
+            padding: 1em 1.5em
+            position: absolute
+            left: 20%
+            top: 65%
+            opacity: 0
+            +soft-transition(opacity)
+            width: 60%
+            border-radius: 5px
+            
+            &.toggleMenu
+                opacity: 1
+                z-index: 1
+
+            .menu__link
+                margin-bottom: 0.1em
+
+                > a 
+                    font-size: 16px
+                    color: $white
+                    text-transform: uppercase
+                
+
+        & .siteLogo img
+            width: 78%
+
+        & .toggleMenuButton
+            outline: 0
+            +soft-transition(background-color)
+ 
+
+            span
+                display: none
+                color: #fff
+                text-transform: uppercase
+                font-size: 18px
+                margin-left: 5.6px
+                font-weight: 600
+
+            i
+                font-weight: 600
+                font-size: 18px
+
+
+        
+         
+// for footer
+#siteFooter
+    background-color: rgba(37, 37, 37, 0.898039215686275)
+    padding: 7% 10%
+
+    .row__col-3:nth-child(2), .row__col-3:nth-child(3)
+        width: 50%
+
+    .dottedLine
+        border-top: 1px dotted $lightGrayColor
+        margin-bottom: 1em
+
+    .text--small
+        text-align: center
+        display: block
+
+    .footerMenu > li
+        line-height: 1.2
+ 
+        &:last-child
+
+            &:hover a, &:hover:before
+                color: $accentColor
+
+            a:before
+                display: inline-block
+                font: normal normal normal 14px/1 FontAwesome
+                font-size: 1rem
+                text-rendering: auto
+                -webkit-font-smoothing: antialiased
+                content: "\f013"
+                color: #c9c9c9
+                margin-right: 0.2em
+                +soft-transition(color)
+
+        .menu__link--active
+            color: #fff
+
+            &:before
+                color: #fff !important
+
+
+.subscribeForm
+    
+    .btn
+        background-color: #737B7D
+        width: 33%
+        padding: 5px 0
+        +soft-transition(background-color)
+
+        &:hover
+            background-color: #6c7577
+
+.socialMenu a > i
+    font-size: 1.8rem
+    color: $lightGrayColor
+
+
+
+
+@media screen and (min-width: 667px)
+    .row
+        display: flex
+        flex-direction: row
+
+        & .row__col-3
+            width: 25%
+            margin-right: 2.5%
+            
+            &:first-child
+                margin-right: 0
+                order: 1
+
+        & .subscribeForm .btn
+            width: 60%
+
+    #siteHeader
+        .toggleMenuButton
+            display: flex
+            align-items: center
+            padding: 10px
+            background-color: #0bbaff
+            border: 0
+            border-radius: 5px
+
+            & > i
+                color: $white
+
+            &:hover
+                background-color: $accentColor
+
+        nav .toggleMenuButton span
+            display: inline-block
+
+        nav .menu
+            width: 35%
+
+    #siteFooter
+        .row__col-3:nth-child(2), #siteFooter .row__col-3:nth-child(3)
+            width: 25% 
+
+
+@media screen and (min-width: 1200px)
+    .container
+        padding: 0 15%
+
+    #siteHeader 
+    
+        nav 
+            .menu
+                align-items: center
+                justify-content: flex-end                
+                flex-direction: row                
+                background: none
+                position: relative
+                left: 0
+                top: 0
+                width: 100%
+                opacity: 1                
+
+                .menu__link
+                    margin-right: 1.2em
+
+                    &:hover > a
+                        color: $accentColor
+
+                    &:last-child
+                        display: none
+
+                    & > a
+                        color: #0BBAFF
+
+                .menu__link--login
+                    background: #0BBAFF
+                    padding: 0.3em 0.8em
+                    cursor: pointer
+                    margin-right: 0                    
+
+                    &:hover
+                        background: none
+                        border: 1px solid $accentColor
+
+                        a
+                            color: $accentColor
+
+                    > a
+                        color: $white
+
+            .siteLogo img
+                width: 85%
+
+            
+            .toggleMenuButton
+                display: none
+
+    #siteFooter
+        padding: 3% 15%
+          
+
+#breadcrumb--container
+    padding: 5px 15%
+    background: $primaryColor
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    .breadcrumb
+        list-style: none
+        font-size: 17px
+
+        li + li:before
+            padding-right: 4px
+            padding-left: 4px
+            color: white
+            content: ">"
+        
+.link--breadcrumb
+    display: inline
+    
+    .fa
+        font-size: 16px
+    
+    a
+        color: white
+        text-decoration: none
+        font-size: 12px
+
+        &:hover
+            color: #ffa902
+              
+.dropzone
+    width: 100%
+
+// global style for modal.
+.ReactModalPortal
+  +soft-transition(opacity)
+
+  &.isOpen
+    opacity: 1
+
+  &.isClose
+    opacity: 0
+
+.ReactModal__Overlay
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  overflow: scroll
+  background-color: rgba(27,31,35,0.5)
+
+.ReactModal__Content
+  position: absolute
+  top: 40px
+  left: 40px
+  right: 40px
+  bottom: initial
+  border: 1px solid #ccc
+  background: #fff
+  overflow: auto
+  WebkitOverflowScrolling: touch
+  -webkit-border-radius:
+  -moz-border-radius:
+  border-radius: 4px
+  outline: none
+  padding: 20px
+  width: 450px
+  margin: 0 auto
+/* Remove scroll on the body when react-modal is open */
+//.ReactModal__Body--open
+//  overflow: hidden
+
+          
+          
+          
+          
+          
+          
+

@@ -1,0 +1,3 @@
+rmdir command – Deletes the specified empty directories.
+rm command – Delete the file including sub-directories.
+mv /home/jack/testfile /home/jack/Documents/ - moving file to dir/ changing file name.

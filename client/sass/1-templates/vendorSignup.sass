@@ -1,0 +1,147 @@
+#siteMainVendor
+    background: white
+    
+    .well
+    
+        .paddingBottomTop--big
+            max-width: 620px
+            margin: auto
+
+        .paddingBottomTop--big.one
+            .p--darkGray:before, & .p--darkGray:after
+                width: 70%
+
+        .paddingBottomTop--big.two
+            .p--darkGray:before, & .p--darkGray:after
+                width: 63%
+
+        .paddingBottomTop--big.three
+            .p--darkGray:before, & .p--darkGray:after
+                width: 61%
+
+        .paddingBottomTop--big.four
+            .p--darkGray:before, & .p--darkGray:after
+                width: 76%
+
+        form
+            max-width: 880px
+            margin: auto
+
+            .select--fields
+                width: 100%
+                
+            .fa
+                color: $primaryColor
+                font-size: 16px
+                padding-right: 5px
+
+            .paddingBottomTop--big
+                padding-top: 5%
+                padding-bottom: 1%
+                max-width: none
+                display: block
+
+                .p--darkGray
+                    text-align: left
+                    position: relative
+
+                .p--darkGray:before, & .p--darkGray:after
+                    position: absolute
+                    top: 51%
+                    overflow: hidden
+                    width: 62%
+                    height: 1px
+                    content: '\a0'
+                    background-color: #ffa83c
+                    right: 8%
+
+                .p--darkGray:before
+                    margin-left: -100%
+
+            .form-group
+                padding: 0px 0px 15px 0px
+                display: inline-block
+
+                .error-border
+                    border-color: #d05d60 !important
+
+                input
+                    padding: 10px
+                    width: 360px
+                    background: transparent
+                    border: 2px solid #e4e4e4
+                    outline: none
+
+            .checkbox--white
+                padding: 0 30px 2px
+
+                label
+                    font-size: 16px
+
+            .label--small
+                padding-top: 3%
+                padding-left: 0
+
+                label
+                    font-size: 13px
+
+                    span
+                        color: #999999
+
+            .button--small
+                padding: 10px 0 10px 0
+
+                button
+                    width: 160px
+                    height: 45px
+                    padding: 0
+                    font-size: 16px
+
+                    .fa
+                        color: #fff
+
+            .inquiries
+                text-align: center
+                font-size: 16px
+                padding-bottom: 10%
+              
+              
+@media screen and (max-width: 1030px)
+    #siteMainVendor
+        .well
+            form
+                .paddingBottomTop--big
+                    .p--darkGray
+                        text-align: center
+                    .p--darkGray:before, & .p--darkGray:after
+                        display: none
+
+                .checkbox--white
+                    padding: 0 23%
+
+                .checkbox--white.label--small
+                    text-align: center
+                    padding-top: 2%
+
+                .button--small
+                    text-align: center
+                    display: block
+
+                    .btn
+                      float: none
+                    
+                    
+@media screen and (max-width: 976px)
+    #siteMainVendor
+        .well
+            form
+                max-width: 420px
+
+                .form-group, & .select--fields
+                    width: 100%
+
+                    input
+                        width: 100%
+
+                .checkbox--white
+                    padding: 0

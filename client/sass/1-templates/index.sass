@@ -1,0 +1,212 @@
+@import "base"
+@import "vendorLogin"
+@import "vendorSignup"
+@import "searchSoftware"
+@import "allSoftwares"
+@import "vendorAccount"
+@import "vendorProductListing"
+@import "vendorAccountProfile"
+
+// for the site main container
+#siteContainer
+    background: url("http://localhost:3300/images/home/bg.jpg")
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    background-attachment: fixed
+
+    
+    .hl--darkGray, & .p--darkGray
+        color: #333333
+        text-align: center
+    
+    .p--darkGray
+        font-size: 16px
+        
+    .paddingBottomTop--big
+        padding-top: 3%
+        padding-bottom: 1%
+        max-width: 620px
+        margin: auto
+        
+    .select--field
+        padding: 10px
+        width: 100%
+        max-width: 360px
+        background: transparent
+        border: 2px solid #e4e4e4
+        outline: none
+        color: #a7a7a7
+        height: 48px
+        
+    .lightGray--line
+        width: 100%
+        max-width: 880px
+        height: 2px
+        background-color: #f2f2f2
+        margin: auto
+
+    .help-block
+        display: block
+        font-size: 14px
+        color: #d05d60
+        padding-top: 5px
+        
+
+.profileBox
+
+    .modal
+        display: none
+        position: fixed
+        z-index: 1
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        overflow: auto
+        background-color: rgb(0,0,0)
+        background-color: rgba(0,0,0,0.4)
+
+        .modal-content
+            background-color: #fefefe
+            margin: 15% auto
+            padding: 20px
+            border: 1px solid #888
+            width: 80%
+
+            .close
+                color: #aaa
+                float: right
+                font-size: 28px
+                font-weight: bold
+
+            .close:hover,
+            .close:focus
+                color: black
+                text-decoration: none
+                cursor: pointer
+
+#siteMain 
+    padding: 20% 10%
+
+    p, & h1
+        text-align: center
+        
+    .p--small
+        font-weight: 400
+
+    .marginBottom--big:nth-child(2) + div
+        background-color: rgba(0,0,0,0.1)       
+        border-radius: 20px
+        padding: 1.6em 1em
+        text-align: center
+        max-width: 500px
+        margin: 0 auto
+     
+        .callToAction
+            display: inline
+            background-color: $accentColor
+            color: $white
+            padding: 1em
+            display: inline-block
+            +soft-transition(background-color)
+
+            &:hover
+                background-color: #e69800
+
+    form
+        max-width: 560px
+        width: 100%
+        padding: 1em 0.4em
+        margin: 0 auto
+        background-color: $white
+        display: flex
+        padding: 0.2em 0.4em
+
+        .form__field
+            flex: 2 
+            width: 100%
+            padding: 0.5em 0
+            font-size: 1rem
+            margin-bottom: 0
+
+            &:focus
+                outline: 0
+        
+        button
+            padding: 0 1em
+            +soft-transition(background-color)
+            
+            &:hover
+                background-color: #00a4e4
+
+            & > .fa
+                font-size: 20px
+
+            & span
+                text-transform: uppercase
+                font-size: 14px
+                font-weight: 600
+                margin-left: 0.4em
+                display: none
+
+
+@media screen and (min-width: 768px)
+    #siteMain
+        h1
+            font-size: 2.4rem
+            
+        .p--small
+            font-size: 1rem
+            margin-bottom: 3.5em
+
+        .marginBottom--big:nth-child(2) p
+            margin-bottom: 2em
+
+        & form 
+            padding: 0 
+
+            .form__field
+                padding: 1em 0 1em 0.5em
+
+            button
+                border-radius: 0
+
+                > span
+                    display: inline-block
+
+// resend link
+.buttonLink
+  border: 0
+  background: transparent
+  padding: 0
+  color: $accentColor
+
+// color of the icon.
+.icon--success
+  color: #56cc38 !important
+.icon--error
+  color: #CC3B37 !important
+
+
+@media screen and (min-width: 1200px)
+    #siteMain
+        padding: 10% 10%
+
+        .marginBottom--big:first-child
+            max-width: 750px
+            margin: 0 auto 45px auto
+
+
+#breadcrumb--container, #siteFooter
+    background-color: #62788e
+
+#siteMainVendor.vendorAccount .remove--btn
+    background-color: #f16262
+
+#siteHeader nav .menu .menu__link--login
+    background-color: $primaryColor
+
+
+#siteContainer
+    background: $white
