@@ -7,8 +7,8 @@
 ## Quickstart
 
 ```
-  git clone https://github.com/denniscual/fullstack-node-starter-kit.git
-  cd fullstack-node-starter-kit
+  git clone https://github.com/dextreeamper/browser-software.git
+  cd browser-software
   npm install
   npm start
 ```
